@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implement hook_theme
+ *
+ */
+function weather_theme($existing, $type, $theme, $path) {
+    return array(
+        'weather_page' => array(
+            'variables' => array(
+                'content' => NULL,
+            ),
+        ),
+    );
+}

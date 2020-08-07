@@ -1,0 +1,33 @@
+<div class="row header">
+  <div class="col-sm-4">
+    <div class="header-text">{{ content['weather_header_text'] }}</div>
+  </div>
+</div>
+{% if content['code'] is not empty %}
+ <div class="errormessage">
+    <h1>{{ content['message'] }}</h1>
+ </div>
+{% else %}
+  <div class="row weatherdetails">
+    <div class="temp-details">
+       <h2>{{ content['city'] }},{{ content['country'] }}</h2>
+       <div>{{ content['descrip'] }}</div>
+    </div>
+    <div class="wholedetails">
+      <div class="temperature">
+        <img class="weatherImage" alt="Sunny" src="{{ content['weather_image'] }}">
+        <h1 class="realTemp">{{ content['temp'] }}°F</h1>
+      </div>
+      <div class="otherdetails">
+        <div>Humidity: <span id="humidity">{{ content['humidity'] }}%</span></div>
+        <div>Wind: <span><span class="wind" id="wob_ws">{{ content['wind'] }} km/h</span>
+      </div>
+    </div>
+  </div>
+  {% if content['urlcity'] is empty %}
+    <div class="buttons">
+       <a href="/weather/{{ content['defultcity'] }}">City Based Weather</a>
+       <a href="/weather/{{ content['defultcity'] }}/{{ content['defultzip'] }}">Zip Code Based  Weather</a>
+    </div>
+  {% endif %}
+{% endif %}

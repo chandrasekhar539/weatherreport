@@ -1,0 +1,3 @@
+administer Weather:
+  title: 'Administer Weather'
+  restrict access: true

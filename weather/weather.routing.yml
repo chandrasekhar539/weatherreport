@@ -1,0 +1,18 @@
+weather.weather_report:
+  path: '/weather/{city}/{zipcode}'
+  defaults:
+    _controller: '\Drupal\weather\Controller\WeatherController::weatherReport'
+    zipcode: null
+    city: null
+  requirements:
+    _permission: 'administer Weather'
+
+weather.config:
+  path: '/admin/config/services/weather'
+  defaults:
+    _form: '\Drupal\weather\Form\WeatherForm'
+    _title: 'Weather Configurations'
+  requirements:
+    _permission: 'administer site configuration'
+  options:  
+    _admin_route: TRUE

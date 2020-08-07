@@ -1,0 +1,70 @@
+.temp-details {
+  padding-left: 7%;
+}
+
+.weatherImage {
+  float:left;height:64px;width:64px;
+}
+
+.realTemp {
+  font-size: 25px;
+}
+
+.otherdetails {
+  margin-top: 36px;
+  padding-left: 63px;
+}
+
+.buttons {
+  padding-top: 70px;
+}
+
+.buttons a,
+.buttons a:hover {
+  background: black;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    margin-right: 72px;
+}
+
+.header-image {
+  width: 740px;
+}
+.header-text {
+  font-size: 34px;
+  font-weight: bold;
+}
+.conferences {
+  padding-top:60px;
+}
+.conferences .conference {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+.teams-data {
+  padding-top: 45px;
+}
+.conference-teams .team {
+  padding-bottom: 40px;
+}
+.divisions a,
+.divisions a:hover {
+  color: white;
+  font-size: 20px;
+}
+.divisions a.active {
+  color: #62ff00;
+}
+.nickname {
+  font-size: 30px;
+  border-bottom: 2px solid black;
+}
+.team-name {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.team-name .label {
+  font-weight: bold;
+}

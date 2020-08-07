@@ -1,0 +1,6 @@
+name: Weather Report
+type: module
+description: "Shows the Weather Report from remote API"
+package: Custom
+version: VERSION
+core: 8.x

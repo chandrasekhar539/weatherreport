@@ -1,0 +1,5 @@
+weather.config:
+  title: 'Weather Configurations'
+  description: 'Custom configurations.'
+  route_name: weather.config
+  parent: system.admin_config_development
