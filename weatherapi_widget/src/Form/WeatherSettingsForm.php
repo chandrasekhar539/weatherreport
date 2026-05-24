@@ -11,11 +11,11 @@ final class WeatherSettingsForm extends ConfigFormBase {
     return 'weatherapi_widget_settings_form';
   }
 
-  protected function getEditableConfigNames(): array {
+  protected function getEditableConfigNames() {
     return ['weatherapi_widget.settings'];
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state): array {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('weatherapi_widget.settings');
 
     $form['api_key'] = [

@@ -28,7 +28,7 @@ final class WeatherApiBlock extends BlockBase implements ContainerFactoryPluginI
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): static {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $configuration,
       $plugin_id,
@@ -38,7 +38,7 @@ final class WeatherApiBlock extends BlockBase implements ContainerFactoryPluginI
     );
   }
 
-  public function build(): array {
+  public function build() {
     $config = $this->configFactory->get('weatherapi_widget.settings');
     $query = (string) ($config->get('default_query') ?: 'Paris');
 

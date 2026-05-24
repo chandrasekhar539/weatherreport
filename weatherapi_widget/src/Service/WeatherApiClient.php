@@ -19,7 +19,7 @@ final class WeatherApiClient {
   /**
    * Fetch current weather for a query (e.g., "Paris", "48.8567,2.3508", "10001").
    */
-  public function current(string $query): array {
+  public function current(string $query) {
     $config = $this->configFactory->get('weatherapi_widget.settings');
 
     $api_key = (string) $config->get('api_key');
