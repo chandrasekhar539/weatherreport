@@ -29,7 +29,7 @@ final class WeatherApiBlock extends BlockBase implements ContainerFactoryPluginI
   }
 
   /**
-   *
+   * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
@@ -42,7 +42,7 @@ final class WeatherApiBlock extends BlockBase implements ContainerFactoryPluginI
   }
 
   /**
-   *
+   * {@inheritdoc}
    */
   public function build() {
     $config = $this->configFactory->get('weatherapi_widget.settings');

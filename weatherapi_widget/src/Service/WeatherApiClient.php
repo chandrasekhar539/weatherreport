@@ -8,7 +8,7 @@ use GuzzleHttp\ClientInterface;
 use Psr\Log\LoggerInterface;
 
 /**
- *
+ * {@inheritdoc}
  */
 final class WeatherApiClient {
 

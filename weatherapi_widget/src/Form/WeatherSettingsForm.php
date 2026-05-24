@@ -11,21 +11,21 @@ use Drupal\Core\Form\FormStateInterface;
 final class WeatherSettingsForm extends ConfigFormBase {
 
   /**
-   *
+   * {@inheritdoc}
    */
   public function getFormId(): string {
     return 'weatherapi_widget_settings_form';
   }
 
   /**
-   *
+   * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
     return ['weatherapi_widget.settings'];
   }
 
   /**
-   *
+   * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('weatherapi_widget.settings');
@@ -65,7 +65,7 @@ final class WeatherSettingsForm extends ConfigFormBase {
   }
 
   /**
-   *
+   * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     parent::submitForm($form, $form_state);
