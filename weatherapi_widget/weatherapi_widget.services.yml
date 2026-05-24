@@ -1,0 +1,12 @@
+services:
+  weatherapi_widget.client:
+    class: Drupal\weatherapi_widget\Service\WeatherApiClient
+    arguments:
+      - '@http_client'
+      - '@config.factory'
+      - '@cache.default'
+      - '@logger.channel.weatherapi_widget'
+
+  logger.channel.weatherapi_widget:
+    parent: logger.channel_base
+    arguments: ['weatherapi_widget']

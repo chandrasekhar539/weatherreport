@@ -1,0 +1,5 @@
+weatherapi_widget.settings:
+  title: 'WeatherAPI Widget'
+  description: 'Configure WeatherAPI widget settings.'
+  route_name: weatherapi_widget.settings
+  parent: system.admin_config_services

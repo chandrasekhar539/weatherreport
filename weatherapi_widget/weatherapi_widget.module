@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function weatherapi_widget_theme($existing, $type, $theme, $path) {
+  return [
+    'weatherapi_widget' => [
+      'variables' => [
+        'vars' => [],
+      ],
+      'template' => 'weatherapi-widget',
+    ],
+  ];
+}

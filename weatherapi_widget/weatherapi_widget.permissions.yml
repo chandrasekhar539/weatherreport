@@ -1,0 +1,3 @@
+administer weatherapi widget:
+  title: 'Administer WeatherAPI Widget settings'
+  description: 'Configure API key and default location for WeatherAPI widget.'

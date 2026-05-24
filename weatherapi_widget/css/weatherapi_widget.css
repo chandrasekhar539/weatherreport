@@ -1,0 +1,95 @@
+.wapi-card {
+  max-width: 420px;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.wapi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wapi-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.wapi-sub {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+.wapi-icon {
+  width: 54px;
+  height: 54px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.wapi-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 14px 0 10px;
+}
+
+.wapi-temp {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.wapi-feels {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.wapi-cond {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  opacity: 0.95;
+}
+
+.wapi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.wapi-metric {
+  background: rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.wapi-label {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.wapi-value {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.wapi-error {
+  background: rgba(255, 70, 70, 0.18);
+  border: 1px solid rgba(255, 70, 70, 0.35);
+  padding: 10px 12px;
+  border-radius: 12px;
+}

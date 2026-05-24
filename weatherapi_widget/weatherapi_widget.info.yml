@@ -1,0 +1,5 @@
+name: 'WeatherAPI Widget'
+type: module
+description: 'Weather widget using WeatherAPI.com with DI + Twig + caching.'
+core_version_requirement: ^10 || ^11
+package: Custom

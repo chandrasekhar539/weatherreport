@@ -1,0 +1,41 @@
+<div class="wapi-card">
+  {% if vars.error %}
+    <div class="wapi-error">
+      <strong>Error:</strong> {{ vars.message }}
+    </div>
+  {% else %}
+    <div class="wapi-header">
+      <div>
+        <div class="wapi-title">{{ vars.location_name }}{% if vars.country %}, {{ vars.country }}{% endif %}</div>
+        <div class="wapi-sub">
+          {% if vars.localtime %}Local time: {{ vars.localtime }} · {% endif %}
+          Updated: {{ vars.last_updated }}
+        </div>
+      </div>
+
+      {% if vars.condition_icon %}
+        <img class="wapi-icon" src="{{ vars.condition_icon }}" alt="{{ vars.condition_text }}">
+      {% endif %}
+    </div>
+
+    <div class="wapi-main">
+      <div class="wapi-temp">
+        {{ vars.temp_c }}°C
+        <div class="wapi-feels">Feels like {{ vars.feelslike_c }}°C</div>
+      </div>
+
+      <div class="wapi-cond">{{ vars.condition_text }}</div>
+    </div>
+
+    <div class="wapi-grid">
+      <div class="wapi-metric">
+        <div class="wapi-label">Humidity</div>
+        <div class="wapi-value">{{ vars.humidity }}%</div>
+      </div>
+      <div class="wapi-metric">
+        <div class="wapi-label">Wind</div>
+        <div class="wapi-value">{{ vars.wind_kph }} kph</div>
+      </div>
+    </div>
+  {% endif %}
+</div>
