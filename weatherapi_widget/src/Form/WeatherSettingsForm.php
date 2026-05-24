@@ -5,16 +5,28 @@ namespace Drupal\weatherapi_widget\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ *
+ */
 final class WeatherSettingsForm extends ConfigFormBase {
 
+  /**
+   *
+   */
   public function getFormId(): string {
     return 'weatherapi_widget_settings_form';
   }
 
+  /**
+   *
+   */
   protected function getEditableConfigNames() {
     return ['weatherapi_widget.settings'];
   }
 
+  /**
+   *
+   */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('weatherapi_widget.settings');
 
@@ -52,6 +64,9 @@ final class WeatherSettingsForm extends ConfigFormBase {
     return parent::buildForm($form, $form_state);
   }
 
+  /**
+   *
+   */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     parent::submitForm($form, $form_state);
 

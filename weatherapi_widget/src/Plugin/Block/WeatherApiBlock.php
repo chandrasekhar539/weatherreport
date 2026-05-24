@@ -28,6 +28,9 @@ final class WeatherApiBlock extends BlockBase implements ContainerFactoryPluginI
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 
+  /**
+   *
+   */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $configuration,
@@ -38,6 +41,9 @@ final class WeatherApiBlock extends BlockBase implements ContainerFactoryPluginI
     );
   }
 
+  /**
+   *
+   */
   public function build() {
     $config = $this->configFactory->get('weatherapi_widget.settings');
     $query = (string) ($config->get('default_query') ?: 'Paris');
@@ -62,11 +68,12 @@ final class WeatherApiBlock extends BlockBase implements ContainerFactoryPluginI
 
     return [
       '#theme' => 'weatherapi_widget',
-      '#vars' => $vars,     
+      '#vars' => $vars,
       '#cache' => [
         'contexts' => ['url', 'url.query_args'],
         'tags' => ['config:weatherapi_widget.settings'],
-        'max-age' => 0, // sync with your service cache
+    // Sync with your service cache.
+        'max-age' => 0,
       ],
       '#attached' => [
         'library' => ['weatherapi_widget/widget'],

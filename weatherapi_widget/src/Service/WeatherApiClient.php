@@ -7,6 +7,9 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use GuzzleHttp\ClientInterface;
 use Psr\Log\LoggerInterface;
 
+/**
+ *
+ */
 final class WeatherApiClient {
 
   public function __construct(
