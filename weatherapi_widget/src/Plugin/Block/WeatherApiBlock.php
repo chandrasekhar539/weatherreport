@@ -62,7 +62,12 @@ final class WeatherApiBlock extends BlockBase implements ContainerFactoryPluginI
 
     return [
       '#theme' => 'weatherapi_widget',
-      '#vars' => $vars,
+      '#vars' => $vars,     
+      '#cache' => [
+        'contexts' => ['url', 'url.query_args'],
+        'tags' => ['config:weatherapi_widget.settings'],
+        'max-age' => 0, // sync with your service cache
+      ],
       '#attached' => [
         'library' => ['weatherapi_widget/widget'],
       ],
